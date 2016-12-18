@@ -10,6 +10,6 @@ setup(name='cybercomInstall',
       url='http://cybercommons.org',
       packages=['cybercomInstall',],
       entry_points = {
-        "console_scripts": ['cybercomInstall=cybercomInstall']
+        "console_scripts": ['cybercomInstall = cybercominstall']
         }
      )
