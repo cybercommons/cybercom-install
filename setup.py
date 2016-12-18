@@ -8,5 +8,8 @@ setup(name='cybercomInstall',
       author='Mark STacy',
       author_email='markstacy@ou.edu',
       url='http://cybercommons.org',
-      #packages=['cookiecutter',],
+      packages=['cybercomInstall',],
+      entry_points = {
+        "console_scripts": ['cybercomInstall = cybercomInstall.bin.cybercomInstall']
+        }
      )
