@@ -8,8 +8,8 @@ setup(name='cybercomInstall',
       author='Mark STacy',
       author_email='markstacy@ou.edu',
       url='http://cybercommons.org',
-      #packages=['cybercomInstall',],
+      packages=['cybercomAdmin',],
       entry_points = {
-        "console_scripts": ['cybercomInstall = cybercominstall']
+        "console_scripts": ['cybercomAdmin = cybercomInstall.cybercomInstall']
         }
      )
