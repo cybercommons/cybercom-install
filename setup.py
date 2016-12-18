@@ -8,5 +8,5 @@ setup(name='cybercomInstall',
       author='Mark STacy',
       author_email='markstacy@ou.edu',
       url='http://cybercommons.org',
-      packages=['cookiecutter',],
+      #packages=['cookiecutter',],
      )
