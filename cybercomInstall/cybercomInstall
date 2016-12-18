@@ -12,3 +12,7 @@ def main():
     data['author'] = input("Author [Some Guy]:") or "Some Guy"
     cookiecutter('https://github.com/cybercommons/cybercom-cookiecutter.git',no_input=True,extra_context=data)    
     print("DONE")
+
+
+if __name__ == '__main__':
+    main()
