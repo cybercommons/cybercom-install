@@ -1,5 +1,14 @@
 #!/usr/bin/env python
+from cookiecutter.main import cookiecutter
 
-print("This is a test!")
-author = raw_input("Application Author [Some Guy]:") or "Some Guy"
-print(author)
+def main():
+    data={"author":"Some Guy","application_title": "Some Application","application_short_name": "someapp",
+            "nginx_server_name": "localhost","ssl_self_signed": ["n", "y"],"ssl_valid_days": 365,
+            "broker_host": "localhost","broker_port": 5671,"broker_vhost": "vhost","broker_user": "quser",
+            "broker_pass": "qpass","queue_tasks_org": "cybercommons","queue_tasks_repo": "cybercomq",
+            "queue_tasks_branch": "master","celery_concurrency":8,"docker_worker":"example.oscer.ou.edu",
+            "docker_username":"mstacy","docker_host_data_directory":"/opt"}
+    #print("This is a test!")
+    data['author'] = input("Author [Some Guy]:") or "Some Guy"
+    cookiecutter('https://github.com/cybercommons/cybercom-cookiecutter.git',no_input=True,extra_context=data)    
+    print("DONE")
